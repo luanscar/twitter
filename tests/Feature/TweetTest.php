@@ -45,11 +45,21 @@ test('body is required', function () {
     actingAs(User::factory()->create());
 
     livewire(Create::class)
-    ->set('body', null)
-    ->call('tweet')
-    ->assertHasErrors(['body' => 'required']);
+        ->set('body', null)
+        ->call('tweet')
+        ->assertHasErrors(['body' => 'required']);
+});
+
+test('the tweet body should have a max length of 140 characters', function () {
+    actingAs(User::factory()->create());
+
+    livewire(Create::class)
+        ->set('body', str_repeat('a', 141))
+        ->call('tweet')
+        ->assertHasErrors(['body' => 'max']);
 
 });
-todo('the tweet body should have a max length of 140 characters');
+
+
 todo('should show the tweet on the timeline');
 todo('should set body as null after tweeting');
