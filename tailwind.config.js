@@ -11,6 +11,10 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                twitter:'#1d9bf0',
+                lines: '#2f3336',
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

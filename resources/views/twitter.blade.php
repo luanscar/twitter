@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js']) @livewireStyles
 </head>
 
-<body class="h-full bg-slate-900 font-sans text-white antialiased">
+<body class="h-full bg-black font-sans text-white antialiased">
 
     <div class="container mx-auto grid h-full grid-cols-4">
 
@@ -39,10 +39,25 @@
             </x-btn.tweet>
 
         </div>
-
         <!-- END MENU -->
 
-        <div class="relative col-span-2 border-x-[0.625px]">2</div>
+        {{-- CENTER --}}
+        <div class="col-span-2 relative  border-lines">
+            <div class="flex-1 m-2">
+                <h2 class="px-4 py-2 text-xl font-semibold text-white">Home</h2>
+            </div>
+
+            <ul class="flex w-full grid grid-cols-2 text-center text-lg text-bold text-gray-500 border-b-[0.625px] border-lines">
+                <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
+                    <div class="border-b-4 w-fit border-twitter">For You</div>
+                </li>
+                <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
+                    <div class="border-b-4 w-fit border-transparent">Following</div>
+                </li>
+            </ul>
+        </div>
+        {{-- END CENTER --}}
+
         <div class="mt-2 space-y-6 pl-6"></div>
     </div>
 
