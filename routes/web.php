@@ -5,10 +5,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
-
 Route::get('/', function () {
-    Auth::login(User::first());
+    Auth::login(User::factory()->create());
 
     return view('dashboard');
 });
