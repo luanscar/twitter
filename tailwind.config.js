@@ -11,6 +11,9 @@ export default {
 
     theme: {
         extend: {
+            width: {
+                tb: '0.625px'
+            },
             colors: {
                 twitter:'#1d9bf0',
                 lines: '#2f3336',

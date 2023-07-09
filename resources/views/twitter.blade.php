@@ -34,7 +34,7 @@
             <x-menu.item route="/verified-organization" title="Verified Organization" icon="verified-org" />
             <x-menu.item route="/profile" title="Profile" icon="profile" />
             <x-menu.item route="/more" title="More" icon="more" />
-            <x-btn.tweet>
+            <x-btn.tweet class='mt-6'>
                 Tweet
             </x-btn.tweet>
 
@@ -42,12 +42,12 @@
         <!-- END MENU -->
 
         {{-- CENTER --}}
-        <div class="col-span-2 relative  border-lines">
+        <div class="col-span-2 relative border-x-[0.625px]   border-lines">
             <div class="flex-1 m-2">
                 <h2 class="px-4 py-2 text-xl font-semibold text-white">Home</h2>
             </div>
 
-            <ul class="flex w-full grid grid-cols-2 text-center text-lg text-bold text-gray-500 border-b-[0.625px] border-lines">
+            <ul class="w-full grid grid-cols-2 text-center text-lg text-bold text-gray-500 border-b-[0.625px] border-lines">
                 <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
                     <div class="border-b-4 w-fit border-twitter">For You</div>
                 </li>
@@ -55,10 +55,15 @@
                     <div class="border-b-4 w-fit border-transparent">Following</div>
                 </li>
             </ul>
+            <div class="border-b-[0.625px] border-lines  w-full py-2">
+                <livewire:tweet.create/>
+            </div>
+            <livewire:timeline />
         </div>
         {{-- END CENTER --}}
-
         <div class="mt-2 space-y-6 pl-6"></div>
+
+
     </div>
 
 
