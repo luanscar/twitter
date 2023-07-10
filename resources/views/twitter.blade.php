@@ -58,6 +58,7 @@
             <div class="border-b-[0.625px] border-lines  w-full py-2">
                 <livewire:tweet.create/>
             </div>
+            <div class="text-center text-twitter text-lg font-bold py-3 cursor-pointer">Show 250 Tweets</div>
             <livewire:timeline />
         </div>
         {{-- END CENTER --}}
