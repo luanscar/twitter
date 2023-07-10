@@ -42,30 +42,53 @@
         <!-- END MENU -->
 
         {{-- CENTER --}}
-        <div class="col-span-2 relative border-x-[0.625px]   border-lines">
-            <div class="flex-1 m-2">
-                <h2 class="px-4 py-2 text-xl font-semibold text-white">Home</h2>
+        <div class="col-span-2  relative border-x-[0.625px] border-lines">
+
+            <div class="w-full sticky  top-0 backdrop-blur-xl">
+                <div class="flex-1 m-2">
+                    <h2 class="-m-2 px-4 py-2 text-xl font-semibold text-white">Home</h2>
+                </div>
+
+
+                <ul
+                    class="w-full grid grid-cols-2 text-center text-lg text-bold text-gray-500 border-b-[0.625px] border-lines">
+                    <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
+                        <div class="border-b-4 w-fit border-twitter">For You</div>
+                    </li>
+                    <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
+                        <div class="border-b-4 w-fit border-transparent">Following</div>
+                    </li>
+                </ul>
             </div>
 
-            <ul class="w-full grid grid-cols-2 text-center text-lg text-bold text-gray-500 border-b-[0.625px] border-lines">
-                <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
-                    <div class="border-b-4 w-fit border-twitter">For You</div>
-                </li>
-                <li class="pt-4 cursor-pointer hover:bg-[#e7e9ea1a] flex justify-center">
-                    <div class="border-b-4 w-fit border-transparent">Following</div>
-                </li>
-            </ul>
+
+
             <div class="border-b-[0.625px] border-lines  w-full py-2">
-                <livewire:tweet.create/>
+                <livewire:tweet.create />
             </div>
             <div class="text-center text-twitter text-lg font-bold py-3 cursor-pointer">Show 250 Tweets</div>
+
             <livewire:timeline />
         </div>
         {{-- END CENTER --}}
-        <div class="mt-2 space-y-6 pl-6"></div>
 
-
+        {{-- RIGHT SIDE --}}
+        <div class="mt-2 pl-6 space-y-6">
+            <div class="fixed top-0 pt-2">
+                <x-icons.search class="absolute mt-[15px] ml-5 w-5 fill-neutral-500" />
+                <input type="text" placeholder="Search"
+                    class="
+                bg-neutral-900 rounded-full font-bold
+                focus:outline-none shadow h-12 px-14
+                border-none w-full
+           ">
+            </div>
+        </div>
+        {{-- END SIDE --}}
     </div>
+
+
+
 
 
     @livewireScripts
